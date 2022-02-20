@@ -1,12 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 const CounterButton = (props) => {
+  const [clickAmount, setClickAmount] = useState(0);
+
   return (
-    <button className="AngryButton">
-      {/* When the threshold is not reached */}
-      <span>Don't click me too much!</span>
-      {/* When the threshold is not reached */}
-      <span>Rawr!</span>
+    <button className="CounterButton">
+      You clicked me {clickAmount} amount of times
     </button>
   );
 };
